@@ -49,7 +49,7 @@ response=$(curl -X POST -H "x-Aviator-Api-Key: ${AVIATOR_API_TOKEN}" \
     -H "Commit-Sha: ${GITHUB_SHA}" \
     -H "Repo-Url: https://github.com/${GITHUB_REPOSITORY}" \
     -H "Branch-Name: ${GITHUB_REF_NAME}" \
-    -F "file=@${FILE_PATH}" \
-    "$URL")
+    "${all_files[@]}" \
+	  "$URL")
 
 echo "$response"
