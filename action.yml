@@ -1,0 +1,24 @@
+name: "Upload to Aviator"
+description: "Uploads JunitXML files to Aviator for processing."
+inputs:
+  assets:
+    description: "File path of assets to upload"
+    required: true
+  aviator_api_token:
+    description: "The Aviator API token specific to your account."
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout upload action directory
+      uses: actions/checkout@v3
+      with:
+        repository: aviator-co/upload-action
+        path: upload-action
+    - name: Upload to Aviator
+      env:
+        ASSETS: ${{ inputs.assets }}
+        AVIATOR_API_TOKEN: ${{ inputs.aviator_api_token }}
+      run: bash ${GITHUB_WORKSPACE}/upload-action/upload.sh
+      shell: bash
+
