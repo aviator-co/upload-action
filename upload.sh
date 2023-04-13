@@ -41,7 +41,7 @@ else
 fi
 
 response=$(curl -X POST -H "x-Aviator-Api-Key: ${AVIATOR_API_TOKEN}" \
-    -H "Provider-Name: github_actions" \
+    -H "Provider-Name: github_action" \
     -H "Job-Name: ${GITHUB_JOB}" \
     -H "Workflow-Name: ${GITHUB_WORKFLOW}" \
     -H "Build-URL: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
