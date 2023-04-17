@@ -12,12 +12,12 @@ runs:
   steps:
     - name: Checkout upload action directory
       uses: actions/checkout@v3
-      if: success() || failure()
+      if: always()
       with:
         repository: aviator-co/upload-action
         path: upload-action
     - name: Upload to Aviator
-      if: success() || failure()
+      if: always()
       env:
         ASSETS: ${{ inputs.assets }}
         AVIATOR_API_TOKEN: ${{ inputs.aviator_api_token }}
