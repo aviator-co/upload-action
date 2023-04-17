@@ -14,7 +14,7 @@ Aviator is a developer productivity platform that helps keep builds stable at sc
 Read more in our docs: https://docs.aviator.co/
 
 ## Usage
-To use the Github Action, you need to
+To use the Github Action, you can add an additional step using this action. You'll need to
 - Specify the path to the `assets`. 
 - Set the `aviator_api_token`. You can add this as a [secret in your repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 - Add the `if: success() || failure()` conditional statement. This will ensure that the files are uploaded regardless of test failure.
@@ -47,3 +47,14 @@ jobs:
         assets: test_results/output.xml
         aviator_api_token: ${{ secrets.AVIATOR_API_TOKEN }}
 ```
+
+---
+
+## Resources
+
+[GitHub Action Documentation](https://docs.github.com/en/actions) - Docs for using, creating, and sharing GitHub Actions.
+
+### How to Contribute
+
+We welcome [issues](https://github.com/aviator-co/upload-action/issues) to and [pull requests](https://github.com/aviator-co/upload-action/pulls) against this repository!
+
