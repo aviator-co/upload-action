@@ -12,6 +12,7 @@ runs:
   steps:
     - name: Checkout upload action directory
       uses: actions/checkout@v3
+      if: success() || failure()
       with:
         repository: aviator-co/upload-action
         path: upload-action
