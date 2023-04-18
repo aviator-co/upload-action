@@ -14,7 +14,7 @@ Aviator is a developer productivity platform that helps keep builds stable at sc
 Read more in our docs: https://docs.aviator.co/getting-started/testdeck
 
 ## Usage
-To use the Github Action, you can add an additional step using this action. You'll need to
+To use this Github Action, you can add an additional step in your workflow. You'll need to
 - Specify the path to the `assets`. 
 - Set the `aviator_api_token`. You can add this as a [secret in your repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 - Add the `if: success() || failure()` conditional statement. This will ensure that the files are uploaded regardless of test failure.
