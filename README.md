@@ -41,6 +41,7 @@ jobs:
         pip install pytest
         python -m pytest -vv --junitxml="test_results/output.xml"
     - name: Upload files with github action
+      if: success() || failure()
       uses: aviator-co/upload-action@v0.1
       with:
         assets: test_results/output.xml
