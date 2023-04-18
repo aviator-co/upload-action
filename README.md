@@ -42,7 +42,7 @@ jobs:
         python -m pytest -vv --junitxml="test_results/output.xml"
     - name: Upload files with github action
       if: success() || failure()
-      uses: aviator-co/upload-action@v0.1
+      uses: aviator-co/upload-action@v0.1.0
       with:
         assets: test_results/output.xml
         aviator_api_token: ${{ secrets.AVIATOR_API_TOKEN }}

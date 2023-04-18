@@ -1,5 +1,8 @@
 name: "Upload to Aviator"
 description: "Uploads JunitXML files to Aviator for processing."
+branding:
+  color: yellow
+  icon: activity
 inputs:
   assets:
     description: "File path of assets to upload"
