@@ -1,4 +1,4 @@
-# Github Action to upload test artifacts to Aviator
+# GitHub Action to upload test artifacts to Aviator
 
 Aviator is a developer productivity platform that helps keep builds stable at scale. This GitHub action is an extension to the Aviator service that uploads test artifacts to the Aviator server. Aviator analyzes and catalogs these test artifacts to perform the following functions:
 
@@ -14,7 +14,7 @@ Aviator is a developer productivity platform that helps keep builds stable at sc
 Read more in our docs: https://docs.aviator.co/getting-started/testdeck
 
 ## Usage
-To use this Github Action, you can add an additional step in your workflow. You'll need to
+To use this GitHub Action, you can add an additional step in your workflow. You'll need to
 - Specify the path to the `assets`. 
 - Set the `aviator_api_token`. You can add this as a [secret in your repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 - Add the `if: success() || failure()` conditional statement. This will ensure that the files are uploaded regardless of test failure.
@@ -41,8 +41,7 @@ jobs:
         pip install pytest
         python -m pytest -vv --junitxml="test_results/output.xml"
     - name: Upload files with github action
-      uses: aviator-co/upload-action@v0
-      if: success() || failure()
+      uses: aviator-co/upload-action@v0.1
       with:
         assets: test_results/output.xml
         aviator_api_token: ${{ secrets.AVIATOR_API_TOKEN }}
