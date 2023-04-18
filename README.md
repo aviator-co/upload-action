@@ -11,7 +11,7 @@ Aviator is a developer productivity platform that helps keep builds stable at sc
 - Automatically rerun the test suite if the test failed because of infra issues.
 - Ability to rerun flaky tests so users can get clean test results.
 
-Read more in our docs: https://docs.aviator.co/
+Read more in our docs: https://docs.aviator.co/getting-started/testdeck
 
 ## Usage
 To use the Github Action, you can add an additional step using this action. You'll need to
