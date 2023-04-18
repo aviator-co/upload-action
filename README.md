@@ -5,7 +5,7 @@ Aviator is a developer productivity platform that helps keep builds stable at sc
 - Identify flaky tests in the system reactively and proactively. Aviator provides APIs and webhooks to report these results.
 - Historical view of a particular test case - how often has the test failed (flaky or not), and has the test become stable / unstable. Views by feature branches vs. base branches.
 - Provides visibility into whether test stability is degrading or improving for base branches.
-- Whether test run times are increasing or decreasing (understand P50, P90 , etc of test run times).
+- Whether test run times are increasing or decreasing over time.
 - Ability to rerun the test suite at a particular cadence (nightly jobs) to proactively identify flakes.
 - Provides visibility into whether the test suite is failing because of infra issues (something where we don’t even get a test report) or a real test failure.
 - Automatically rerun the test suite if the test failed because of infra issues.
