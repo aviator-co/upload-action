@@ -1,4 +1,4 @@
-name: "Upload to Aviator"
+name: "Aviator Test Uploader"
 description: "Uploads JunitXML files to Aviator for processing."
 branding:
   color: yellow
