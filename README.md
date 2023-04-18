@@ -1,6 +1,6 @@
 # Github Action to upload test artifacts to Aviator
 
-Aviator is a developer productivity platform that helps keep builds stable at scale. This action is designed as an extension to the Aviator service that helps upload test artifacts to the Aviator server. Aviator analyzes and catalogs these test artifacts to perform the following functions:
+Aviator is a developer productivity platform that helps keep builds stable at scale. This GitHub action is an extension to the Aviator service that uploads test artifacts to the Aviator server. Aviator analyzes and catalogs these test artifacts to perform the following functions:
 
 - Identify flaky tests in the system reactively and proactively. Aviator provides APIs and webhooks to report these results.
 - Historical view of a particular test case - how often has the test failed (flaky or not), and has the test become stable / unstable. Views by feature branches vs. base branches.
