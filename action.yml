@@ -13,7 +13,7 @@ inputs:
   assets_required:
     description: "Whether assets should be required. If true, the action will fail if no test files are found."
     required: false
-    default: "false"
+    default: "true"
 runs:
   using: "composite"
   steps:

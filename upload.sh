@@ -23,10 +23,10 @@ done
 
 if [ "${#all_files[@]}" -eq 0 ]; then
     if [ "${ASSETS_REQUIRED}" = "true" ]; then
-        echo "No files found."
+        echo "No asset files found to upload."
         exit 1
     else
-        echo "WARNING: No files found."
+        echo "WARNING: No asset files found to upload."
         exit 0
     fi
 else
