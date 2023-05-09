@@ -46,6 +46,9 @@ jobs:
       with:
         assets: test_results/output.xml
         aviator_api_token: ${{ secrets.AVIATOR_API_TOKEN }}
+        # NOTE: This is optional (the default value is true).
+        # If true, the action will fail if no assets are found.
+        assets_required: false
 ```
 
 ---

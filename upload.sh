@@ -22,8 +22,13 @@ for filename in ${ASSETS}; do
 done
 
 if [ "${#all_files[@]}" -eq 0 ]; then
-    echo "No files found."
-    exit 1
+    if [ "${ASSETS_REQUIRED}" = "true" ]; then
+        echo "No asset files found to upload."
+        exit 1
+    else
+        echo "WARNING: No asset files found to upload."
+        exit 0
+    fi
 else
     echo "Files found: "
     echo "${all_files[@]}"
